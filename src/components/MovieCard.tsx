@@ -6,11 +6,16 @@ interface MovieCardProps {
   image: string;
   year?: string;
   rating?: string;
+  movieId?: number;
 }
 
-const MovieCard: React.FC<MovieCardProps> = ({ title, image, year, rating }) => {
+const MovieCard: React.FC<MovieCardProps> = ({ title, image, year, rating, movieId = 1 }) => {
+  const handleClick = () => {
+    window.location.href = `/watch/${movieId}`;
+  };
+
   return (
-    <div className="movie-card-hover group cursor-pointer">
+    <div className="movie-card-hover group cursor-pointer" onClick={handleClick}>
       <div className="relative aspect-video bg-gray-800 rounded-md overflow-hidden">
         <img 
           src={image} 

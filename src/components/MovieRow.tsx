@@ -31,6 +31,7 @@ const MovieRow: React.FC<MovieRowProps> = ({ title, movies }) => {
                 image={movie.image}
                 year={movie.year}
                 rating={movie.rating}
+                movieId={movie.id}
               />
             </div>
           ))}

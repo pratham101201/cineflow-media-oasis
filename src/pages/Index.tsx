@@ -5,7 +5,7 @@ import HeroBanner from '../components/HeroBanner';
 import MovieRow from '../components/MovieRow';
 
 const Index = () => {
-  // Sample movie data
+  // Sample movie data - in real app, this would come from your Python/Firebase backend
   const trendingMovies = [
     {
       id: 1,
